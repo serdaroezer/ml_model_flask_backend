@@ -18,7 +18,7 @@ class House(object):
     def dictionary_to_object(self, json_dict):
         self.No = int(json_dict['No'])
         self.transaction_date = float(json_dict['transaction_date'])
-        self.house_age = int(json_dict['house_age'])
+        self.house_age = float(json_dict['house_age'])
         self.distance_to_the_nearest_MRT_station = float(json_dict['distance_to_the_nearest_MRT_station'])
         self.number_of_convenience_stores = int(json_dict['number_of_convenience_stores'])
         self.latitude = float(json_dict['latitude'])
