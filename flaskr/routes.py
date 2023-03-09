@@ -1,6 +1,5 @@
 from flask import Blueprint, request, make_response, jsonify
 from flaskr.models import House
-from flaskr.service import make_prediction
 from ml_module import create_model
 
 model=create_model('polynomial')
