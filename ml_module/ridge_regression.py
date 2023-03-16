@@ -3,7 +3,7 @@ from os import path
 from ml_module.ml_strategy import MLStrategy
 
 
-class PolynomialRegression(MLStrategy):
+class RidgeRegression(MLStrategy):
     def __init__(self):
         self.model = None
         basedir = path.abspath(path.dirname(__file__))

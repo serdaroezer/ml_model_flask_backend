@@ -33,3 +33,17 @@ class House(object):
 
     def object_to_pandas_dataframe(self):
         return pd.DataFrame(self.__dict__, [0])
+
+    def drop_columns(self, df, columns):
+        return df.drop(columns, axis=1)
+
+    def mean_normalize(self, df):
+        # distance_to_the_nearest_MRT_station_mean = 1089.953902
+        # number_of_convenience_stores_mean = 4.077859
+        # latitude_mean = 24.968993
+        # longitude_mean = 121.533328
+
+        means = [1089.953902, 4.077859, 24.968993, 121.533328]
+        stds = [1264.697946, 2.932371, 0.012446, 0.015391]
+
+        return (df - means) / stds
